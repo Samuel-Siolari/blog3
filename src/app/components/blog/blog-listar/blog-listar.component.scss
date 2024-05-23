@@ -1,6 +1,23 @@
 .card {
+  border: 1px blue solid;
+  padding: 10px;
   margin: 100px 0 50px 0;
+  border-radius: 10px;
   img {
     width: 175px;
   }
+  .id-post {
+    color: rgb(174, 57, 57);
+  }
+  .user-post{
+    color: green
+  }
+  .title{
+    margin: 20px 0;
+    color: black;
+    font-size: 18px;
+  }
+
 }
+
+
