@@ -1,0 +1,68 @@
+<form [formGroup]="form">
+  <div class="row" style="margin-top: 100px">
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Nome:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          formControlName="nome"
+        />
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">CEP:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="00000-000"
+          formControlName="cep"
+        />
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">CPF:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="000.000.000-00"
+          formControlName="cpf"
+        />
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Senha:</label>
+        <input
+          type="date"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="senha"
+          formControlName="senha"
+          required=""
+        />
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="salvar()">
+    Salvar
+  </button>
+  <div class="row">
+    <ul>
+      <li *ngFor="let item of data">teste {{ item.nome }}</li>
+    </ul>
+    <h1>{{ mensagem }}</h1>
+    <div class="alert alert-danger" role="alert" *ngIf="invalido">
+      Formulário inválido, por favor verifique os campos e tente novamente.
+    </div>
+  </div>
+</form>

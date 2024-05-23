@@ -1,0 +1,28 @@
+<!-- tabela -->
+<app-header> </app-header>
+
+<main class="container">
+  <div class="row mb-4">
+    <div class="col-md-3" *ngFor="let item of datapost">
+      <div
+        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+      >
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">{{ item.id }}</strong>
+          <h3 class="mb-0">{{ item.userId }}</h3>
+          <div class="mb-1 text-muted">{{ item.title }}</div>
+          <p class="mb-auto">{{ item.body }}</p>
+          <a href="#" class="stretched-link"><td><button (click)="redirectEditar(item.id)">editar</button></td></a>
+        </div>
+
+        <div class="col-auto d-none d-lg-block">
+          <img
+            src="https://picsum.photos/seed/picsum/200/300"
+            alt="Melhores montanhas"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+

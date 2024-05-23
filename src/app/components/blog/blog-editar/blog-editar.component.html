@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div>
+  <h1>{{ datapost.userId }} Post</h1>
+  <h3>Contents</h3>
+  <h4>
+    <li><b>Title:</b> {{ datapost.title }}</li>
+  </h4>
+  <h4>
+    <li><b>Post: </b>{{ datapost.body }}</li>
+  </h4>
+  <h4>
+    <li><b>Id: </b>{{ datapost.id }}</li>
+  </h4>
+</div>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">PostID</th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of comments">
+        <th scope="row">{{ item.postId }}</th>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.body }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
